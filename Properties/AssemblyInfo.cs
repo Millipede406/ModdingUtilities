@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using ModdingUtilities;
@@ -37,5 +38,8 @@ using MelonLoader;
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
-[assembly: MelonInfo(typeof(ModMain), "ModdingUtilities", "v0.1", "MillimediaGames")]
+[assembly: MelonInfo(typeof(ModMain), "ModdingUtilities", "0.1", "MillimediaGames")]
+[assembly: MelonPriority(-10000)]
+[assembly: MelonColor(ConsoleColor.Green)]
+[assembly: MelonAuthorColor(ConsoleColor.Magenta)]
 [assembly: MelonGame("Lychee Game Labs", "Patch Quest")]

@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MelonLoader;
+using UnityEngine;
+using PatchQuest;
 
 namespace ModdingUtilities
 {
-    public class ModMain : MelonMod
+    public class ModMain : PatchQuestMod
     {
-
+        
     }
 }
