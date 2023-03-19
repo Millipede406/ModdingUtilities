@@ -10,14 +10,22 @@ namespace ModdingUtilities
     public class PatchQuestMod : MelonMod
     {
         public static List<PatchQuestMod> Instances;
+
+        public static void LoadInstance(PatchQuestMod mod)
+        {
+            Instances.Add(mod);
+            ModMain.Msg($"Mod {mod.MelonAssembly.Assembly.GetName()} added to mod instances");
+        }
+        /// <summary>
+        /// IMPORTANT: Your mod will not load if you do not run base.OnInitializeMelon() at the start of this function
+        /// </summary>
         public override void OnInitializeMelon()
         {
             if(Instances == null)
             {
                 Instances = new List<PatchQuestMod>();
             }
-            Instances.Add(this);
-            LoggerInstance.Msg($"Mod {MelonAssembly.Assembly.FullName} added to mod instances");
+            LoadInstance(this);
         }
         /// <summary>
         /// IMPORTANT: DO NOT USE THIS METHOD. USE `Update()` OR `MainUpdate()` INSTEAD
