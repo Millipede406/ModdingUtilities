@@ -11,6 +11,7 @@ namespace ModdingUtilities
     {
         public static List<PatchQuestMod> Instances;
 
+        public GameState GameState;
         public static void LoadInstance(PatchQuestMod mod)
         {
             Instances.Add(mod);
@@ -47,6 +48,7 @@ namespace ModdingUtilities
                     QuestUpdate();
                 }
             }
+            GameState = Game.State;
         }
         /// <summary>
         /// Called every frame
